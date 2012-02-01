@@ -10,8 +10,8 @@ let () =
 
   (* first generate the array of trees*)
 
-  let s_ch = open_out "status.txt" in
-  let p_ch = open_out "pairs.tre" in
+  let s_ch = open_out "coimm_status.txt" in
+  let p_ch = open_out "coimm_pairs.tre" in
 
   for n_leaves=2 to max_leaves do
     let newtrees = ref [] in
