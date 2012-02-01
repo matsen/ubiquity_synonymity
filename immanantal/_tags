@@ -1,0 +1,3 @@
+<src>: include
+<**/*.ml>: use_bigarray
+<**/*.{ml,mli,byte,native,top,p.native,d.byte}>: use_bigarray
