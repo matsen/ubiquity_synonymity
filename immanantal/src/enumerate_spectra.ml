@@ -9,6 +9,9 @@ let () =
   Printf.fprintf sch "leaves\ttrees\tspectra\n";
   let pch = open_out "n_spectra_results/spectra_profile.out" in
 
+  let time_ch = open_out "n_spectra_results/time.out" in
+  let prev_time = ref (Unix.time ()) in
+
   for n_leaves=2 to max_leaves do
     let newtrees = ref [] in
     for split=1 to n_leaves/2 do
@@ -39,6 +42,9 @@ let () =
     let n_trees = Array.length trees.(n_leaves) in
     Format.printf "Constructed %d trees of %d leaves...\n" n_trees n_leaves;
     flush stdout;
+    let curr_time = Unix.time () in
+    Printf.fprintf time_ch "%d\t%g\n" n_trees (curr_time -. !prev_time);
+    prev_time := curr_time;
 
     let c = Count.create n_trees in
     for i=0 to n_trees-1 do
@@ -54,7 +60,10 @@ let () =
     Printf.fprintf pch "\n";
     flush pch;
 
+  flush_all ();
+
   done;
   close_out sch;
   close_out pch;
+  close_out time_ch;
   ()
