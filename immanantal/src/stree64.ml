@@ -1,34 +1,10 @@
 (* uses 64 bit integers for matchings and immanental poly's *)
 
 (*
- *
- *
- *
- *
- *
- *
  * NOTE:
  *
  * the Mat FBMR layout has changed from column-major to row-major layout
  * see Bigmat and Mat.FBMR for details
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
  *
  *)
 type stree = Node of (stree list)

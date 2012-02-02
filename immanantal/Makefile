@@ -10,3 +10,7 @@ $(RELEASE):
 	make $@.native
 	cp `readlink $@.native` bin/$@
 	rm $@.native
+
+run:
+	mkdir -p n_spectra_results
+	ls bin/* | parallel -j 10 srun -p emhigh './{}'
