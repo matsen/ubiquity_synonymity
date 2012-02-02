@@ -1,6 +1,6 @@
 let () =
 
-  let max_leaves = 20 in
+  let max_leaves = 18 in
   let trees = Array.create (max_leaves+1)
     (Array.create 1 (Stree64.create ())) in
 

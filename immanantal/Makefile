@@ -1,4 +1,12 @@
+RELEASE=coimm enumerate_spectra check
 
-coimm enumerate_spectra check:
-	ocamlbuild $@.native
-	./$@.native
+all: $(RELEASE)
+
+%.native %.byte %.p.native:
+	ocamlbuild $@
+
+$(RELEASE):
+	if [ ! -e bin ]; then mkdir bin; fi
+	make $@.native
+	cp `readlink $@.native` bin/$@
+	rm $@.native
