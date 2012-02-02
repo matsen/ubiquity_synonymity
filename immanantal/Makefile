@@ -11,6 +11,10 @@ $(RELEASE):
 	cp `readlink $@.native` bin/$@
 	rm $@.native
 
-run:
+run: $(RELEASE)
 	mkdir -p n_spectra_results
 	ls bin/* | parallel -j 10 srun -p emhigh './{}'
+
+clean:
+	rm -rf bin
+	ocamlbuild -clean
