@@ -1,4 +1,6 @@
-# Code to accompany the paper *Ubiquity of synonymity: almost all large binary trees are not uniquely identified by their spectra or their immanantal polynomials* by Frederick A. Matsen and Steven N. Evans
+# Code to accompany the paper *Ubiquity of synonymity: almost all large binary trees are not uniquely identified by their spectra or their immanantal polynomials* by Matsen and Evans
+
+[Link to paper] (http://arxiv.org/abs/q-bio/0512010)
 
 ## Abstract
 
