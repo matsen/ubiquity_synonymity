@@ -1,4 +1,4 @@
-codist enumerates the spectra. 
+codist enumerates the spectra.
 
 check checks that the two iso-distance-spectral trees bm1 and bm2 have
 the exchange property.

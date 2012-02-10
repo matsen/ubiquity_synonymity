@@ -1,20 +1,20 @@
 
 let () =
 
-  let max_leaves = 18 in
-  let trees = Array.create (max_leaves+1) 
+  let max_leaves = 19 in
+  let trees = Array.create (max_leaves+1)
     (Array.create 1 (Stree64dist.create ())) in
-  
+
   let sch = open_out "n_rootdist.out" in
   Printf.fprintf sch "leaves\ttrees\trootdists\n";
 
 
   (* note that the trees array is actually indexed by the number of
-     leaves, not one less than it! Therefore split goes from 1 to 
+     leaves, not one less than it! Therefore split goes from 1 to
      n_leaves/2. *)
-  
-  (* first generate the array of trees*)  
-  
+
+  (* first generate the array of trees*)
+
   for n_leaves=2 to max_leaves do
     let newtrees = ref [] in
     for split=1 to n_leaves/2 do
@@ -23,7 +23,7 @@ let () =
       if ((n_leaves mod 2) = 0) && ((n_leaves/2) = split) then (
 	(* we have equal depth on either side, so let's not duplicate *)
 	for i=0 to Array.length left - 1 do
-	  for j=i to Array.length right - 1 do 
+	  for j=i to Array.length right - 1 do
 	    (* j=i for non-dup *)
 	    let nt = Stree64dist.join2 left.(i) right.(j) in
 	    newtrees := nt::!newtrees;
@@ -37,7 +37,7 @@ let () =
 	    newtrees := nt::!newtrees;
 	  done;
 	done;
-      ); 
+      );
     done;
     let newt = Array.of_list !newtrees in
     trees.(n_leaves) <- newt;

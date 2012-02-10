@@ -42,7 +42,5 @@ let evidence results_dir b1 b2 =
   with Exit -> ();
   ()
 
-(*
 let () =
   evidence "bm_results" Stree64.bm1 Stree64.bm2
-  *)
