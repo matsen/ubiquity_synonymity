@@ -8,4 +8,4 @@ There are several common ways to encode a tree as a matrix, such as the adjacenc
 
 ## Code
 
-There are two directories, `distance` and `immanantal` that contain source code for the distance matrix spectrum and the adjacency/Laplacian spectrum, respectively.
+There are two directories, `distance` and `immanantal` that contain source code for the computing results on the distance matrix spectrum and the adjacency/Laplacian spectrum, respectively.

@@ -10,13 +10,13 @@ let cloak m row col =
       else if i=n_cols then row.(j)
       else if j=n_rows then col.(i)
       else Mat.AAZ64.get m i j
-      ) 
+      )
 
-let print_poly ch p = 
+let print_poly ch p =
   Array.iter (fun x -> Printf.fprintf ch "%Ld\t" x) p;
   Printf.fprintf ch "\n"
 
-let check b1 b2 = 
+let check b1 b2 =
   let m1 = Stree64dist.to_dist_int64 b1 in
   let m2 = Stree64dist.to_dist_int64 b2 in
   let a1 = Stree64dist.dists_to_root b1 in
@@ -26,7 +26,7 @@ let check b1 b2 =
   let ch1 = open_out "dist_poly1.txt" in
   let ch2 = open_out "dist_poly2.txt" in
 
-  let test_mats m1 m2 = 
+  let test_mats m1 m2 =
     let cp1 = Mat.AAZ64.char_poly m1 in
     let cp2 = Mat.AAZ64.char_poly m2 in
 
@@ -51,8 +51,8 @@ let check b1 b2 =
 
     check Stree64dist.bm1 Stree64dist.bm2 ;
 
-    let print_tree fname t = 
-      let ch = open_out fname in 
+    let print_tree fname t =
+      let ch = open_out fname in
       Printf.fprintf ch "%s;\n" (Stree64dist.to_newick t);
       close_out ch;
       ()
