@@ -1,4 +1,6 @@
 
+(* "cloaking" refers to building a matrix out of a row, a column, and a matrix
+ * as in Lemma 4 (the exchange property for distance matrices) *)
 let cloak m row col =
   let n_rows = Mat.AAZ64.n_rows m in
   let n_cols = Mat.AAZ64.n_cols m in
@@ -23,8 +25,8 @@ let check b1 b2 =
   let a2 = Stree64dist.dists_to_root b2 in
   let one = Array.make (Stree64dist.n_leaves b1) Int64.one in
 
-  let ch1 = open_out "dist_poly1.txt" in
-  let ch2 = open_out "dist_poly2.txt" in
+  let ch1 = open_out "check_results/dist_poly1.txt" in
+  let ch2 = open_out "check_results/dist_poly2.txt" in
 
   let test_mats m1 m2 =
     let cp1 = Mat.AAZ64.char_poly m1 in
@@ -58,7 +60,7 @@ let check b1 b2 =
       ()
       in
 
-      print_tree "bm1.nex" Stree64dist.bm1;
-      print_tree "bm2.nex" Stree64dist.bm2;
+      print_tree "check_results/bm1.nex" Stree64dist.bm1;
+      print_tree "check_results/bm2.nex" Stree64dist.bm2;
 
       ()

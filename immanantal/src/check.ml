@@ -43,4 +43,4 @@ let evidence results_dir b1 b2 =
   ()
 
 let () =
-  evidence "bm_results" Stree64.bm1 Stree64.bm2
+  evidence "check_results" Stree64.bm1 Stree64.bm2
