@@ -11,10 +11,10 @@ There are several common ways to encode a tree as a matrix, such as the adjacenc
 ### `distance` directory: distance matrix spectrum
 * `distance/check_results`- checks to make sure that the trees in Figure 1(b)
    have the exchange property with respect to the distance matrix spectrum
-* `distance/n_spectra_results` - finds the number of spectra
+* `distance/n_spectra_results` - the number of spectra
 
 ### `immanantal` directory: for immanantal polynomial of generalized Laplacian spectrum
 * `immanantal/check_results` - checks to make sure that the trees in Figure 1(b)
    have the exchange property with respect to the immanantal polynomials
-* `immanantal/coimm_results` - finds coimmanantal pairs of trees
-* `immanantal/n_spectra_results` - finds the number of spectra
+* `immanantal/coimm_results` - coimmanantal pairs of trees
+* `immanantal/n_spectra_results` - number of immanantal polynomials
