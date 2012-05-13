@@ -8,13 +8,24 @@ There are several common ways to encode a tree as a matrix, such as the adjacenc
 
 ## Code and results
 
-### `distance` directory: distance matrix spectrum
-* `distance/check_results`- checks to make sure that the trees in Figure 1(b)
-   have the exchange property with respect to the distance matrix spectrum
-* `distance/n_spectra_results` - the number of spectra
-
 ### `immanantal` directory: for immanantal polynomial of generalized Laplacian spectrum
 * `immanantal/check_results` - checks to make sure that the trees in Figure 1(b)
    have the exchange property with respect to the immanantal polynomials
 * `immanantal/coimm_results` - coimmanantal pairs of trees
 * `immanantal/n_spectra_results` - number of immanantal polynomials
+
+This empty diff shows that the hypotheses of Lemma 3 are satisfied for
+the trees in Figure 1(b):
+
+    diff immanantal/check_results/a immanantal/check_results/b
+
+### `distance` directory: distance matrix spectrum
+* `distance/check_results`- checks to make sure that the trees in Figure 1(b)
+   have the exchange property with respect to the distance matrix spectrum
+* `distance/n_spectra_results` - the number of spectra
+
+This empty diff shows that the hypotheses of Lemma 4 are satisfied for
+the trees in Figure 1(b):
+
+    diff distance/check_results/dist_poly1.txt distance/check_results/dist_poly2.txt
+
