@@ -12,8 +12,6 @@ $(RELEASE):
 	rm $@.native
 
 run: $(RELEASE)
-	mkdir -p n_spectra_results
-	mkdir -p check_results
 	ls bin/* | parallel -j 10 srun -p emhigh './{}'
 
 clean:

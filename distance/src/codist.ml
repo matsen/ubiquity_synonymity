@@ -68,6 +68,7 @@ let () =
 
 
 (*
+ * For finding co-distance-mat-spectral trees.
 
     let poly = Array.map (
       fun t ->
